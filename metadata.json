@@ -1,0 +1,6 @@
+{
+  "name": "Vrindavan Smart Savings Management System",
+  "description": "VRINDAVAN SMALL MICROFINANCE PRIVATE LIMITED - बचत खाता, दैनिक व मासिक संग्रह, VIP रसीद, पासबुक, ब्याज और रिपोर्टिंग सिस्टम",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

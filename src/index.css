@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-hindi: 'Mukta', sans-serif;
+    --font-sans: 'Plus Jakarta Sans', 'Mukta', sans-serif;
+  }
+  
+  body {
+    font-family: var(--font-sans);
+  }
+}
+
+/* Watermark pattern styling for passbook and official receipts */
+.bg-watermark {
+  position: relative;
+}
+.bg-watermark::before {
+  content: "VRINDAVAN SMALL MICROFINANCE";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: rgba(16, 185, 129, 0.05);
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 0;
+  letter-spacing: 0.1em;
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  @page {
+    margin: 10mm;
+    size: auto;
+  }
+
+  .print-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .print-break-inside-avoid {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
